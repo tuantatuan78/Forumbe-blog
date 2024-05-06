@@ -16,7 +16,7 @@ public class MailApi {
     private MailService mailService;
 
     @PostMapping("/send-mail")
-    public ResponseEntity<String> sendMail(@RequestParam String to) {
+    public ResponseEntity<String> sendMail(@RequestParam("to") String to) {
 
         String randomKey = RandomKey.genKey();
 
